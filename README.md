@@ -1,5 +1,7 @@
 # React Sudoku Solver
-A React App to Solve a given sudoku grid
+A React App to Solve a given sudoku grid.
+
+
 In case of multiple solutions, the solver will only provide one solution. It is also able to see if an initial configuration has a solution or not.
 # React + Vite
 
