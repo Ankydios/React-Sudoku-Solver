@@ -1,10 +1,10 @@
 import React from 'react';
 import './style.css';
 
-const Button = ({handleClick}) => {
+const Button = ({handleClick, value}) => {
   return (
     <button onClick={()=>handleClick()} className="buttonBlue">
-      SOLVE
+      {value}
     </button>
   );
 };

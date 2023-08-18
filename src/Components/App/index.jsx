@@ -36,17 +36,34 @@ export default function App() {
     }
   }
 
+  function reset() {
+    setGridState((gridState) => {
+      return ({
+        gridValues: empty_grid(dimension),
+        initialGrid: empty_grid(dimension),
+        selectedCell: gridState.selectedCell
+      })
+    })
+  }
+
   return (
     <div style={{display:"flex", flexDirection:'column', width: "1000px", margin:"auto", alignItems:"center"}}>
       <h1 style={{fontFamily:"Roboto",marginBottom:"10px", color:"#007bff"}}>React Sudoku Solver</h1>
       <p style={{fontFamily:"Roboto",marginBottom:"10px"}}>Enter the numbers of your grid then press solve button.</p>
+
+      <div>
       <Grid 
           dimension={dimension} 
           style={gridStyle}
           gridState={gridState}
           setGridState={setGridState}
           />
-      <Button handleClick={()=>handleClick()}/>
+      </div>
+      <div style={{display:"flex",justifyContent:"space-around",width:"200px"}}>
+      <Button handleClick={()=>handleClick()} value="Solve"/>
+      <Button handleClick={()=>reset()} value="Reset"/>
+      </div>
+
     </div>
   );
 }
