@@ -2,7 +2,8 @@
 A React App to Solve a given sudoku grid.
 
 
-In case of multiple solutions, the solver will only provide one solution. It is also able to see if an initial configuration has a solution or not.
+In case of multiple solutions, the solver will only provide one solution. 
+It is also able to see if an initial configuration has a solution or not.
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
