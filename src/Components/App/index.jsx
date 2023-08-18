@@ -6,11 +6,6 @@ import solve from '../../utilities/solver'
 const dimension = 9
 
 
-const gridStyle = {
-    backgroundColor: "black",
-    width: "1000px",
-    margin: "100px !important",
-}
 
 export default function App() {
   const [gridState,setGridState] = useState({
@@ -47,14 +42,13 @@ export default function App() {
   }
 
   return (
-    <div style={{display:"flex", flexDirection:'column', width: "1000px", margin:"auto", alignItems:"center"}}>
+    <div style={{display:"flex", flexDirection:'column', width: "400px", margin:"auto", alignItems:"center"}}>
       <h1 style={{fontFamily:"Roboto",marginBottom:"10px", color:"#007bff"}}>React Sudoku Solver</h1>
       <p style={{fontFamily:"Roboto",marginBottom:"10px"}}>Enter the numbers of your grid then press solve button.</p>
 
       <div>
       <Grid 
           dimension={dimension} 
-          style={gridStyle}
           gridState={gridState}
           setGridState={setGridState}
           />
